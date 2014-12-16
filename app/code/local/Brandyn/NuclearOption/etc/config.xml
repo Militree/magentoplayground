@@ -4,4 +4,22 @@
 			<version>0.0.1</version>
 		</Brandyn_NuclearOption>
 	</modules>
+	<frontend>
+		<layout>
+			<updates>
+				<Brandyn_NuclearOption module="Brandyn_NuclearOption">
+					<file>Brandyn/nuclearoption.xml</file>
+				</Brandyn_NuclearOption>
+			</updates>
+		</layout>
+		<routers>
+			<Brandyn_NuclearOption>
+				<use>standard</use>
+				<args>
+					<module>Brandyn_NuclearOption</module>
+					<frontName>nuke</frontName>
+				</args>
+			</Brandyn_NuclearOption>			
+		</routers>
+	</frontend>
 </config>

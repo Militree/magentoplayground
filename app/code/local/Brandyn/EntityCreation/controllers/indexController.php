@@ -9,7 +9,7 @@
 
 class Brandyn_EntityCreation_IndexController extends Mage_Core_Controller_Front_Action {
 
-	public function  _construct() {
+	public function _construct() {
 		createAttributeSet(4, 'Pixafy');
 	} 
 

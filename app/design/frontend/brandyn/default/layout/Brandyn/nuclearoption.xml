@@ -1,0 +1,24 @@
+<layout>
+	<customer_account>
+		<reference name="customer_account_navigation">
+			<action method="addLink" module="nuclearoption"><name>NukeProducts</name><path>nukeproducts/index/index</path><label>Disable All Products</label></action>
+			<action method="addLink" module="nuclearoption"><name>NukePasswords</name><path>nukepasswords/index/index</path><label>Reset All Passwords</label></action>
+		</reference>
+	</customer_account>
+
+	<brandyn_nukeproducts_index_index>
+        <update handle="customer_account" />
+	    <reference name="my.account.wrapper">
+	        <block type="core/template" name="brandyn_nuclearoption" template="nuke/products.phtml"/>            
+	    </reference>		
+	</brandyn_nukeproducts_index_index>
+
+	<brandyn_nukepasswords_index_index>
+        <update handle="customer_account" />
+	    <reference name="my.account.wrapper">
+	        <block type="core/template" name="brandyn_nuclearoption" template="nuke/passwords.phtml"/>            
+	    </reference>		
+	</brandyn_nukepasswords_index_index>
+
+
+</layout>

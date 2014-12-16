@@ -6,12 +6,12 @@
 	</modules>
 	<global>
 		<helpers>
-			<brandyn_trackcustomers>
+			<Brandyn_Trackcustomers>
 				<class>Brandyn_TrackCustomers_Helper</class>
-			</brandyn_trackcustomers>
+			</Brandyn_Trackcustomers>
 		</helpers>
 		<resources>
-			<brandyn_trackcustomers_setup>
+			<Brandyn_Trackcustomers_setup>
 				<setup>
 					<modules>Brandyn_TrackCustomers</modules>
 					<class>Brandyn_TrackCustomers_Model_Entity_Setup</class>
@@ -19,25 +19,25 @@
 		        <connection>
 		            <use>core_setup</use>
 		        </connection>
-			</brandyn_trackcustomers_setup>
+			</Brandyn_Trackcustomers_setup>
 		</resources>
 	</global>
 	<frontend>
 		<layout>
 			<updates>
-				<brandyn_trackcustomers module="Brandyn_TrackCustomers">
+				<Brandyn_Trackcustomers module="Brandyn_TrackCustomers">
 					<file>Brandyn/trackcustomers.xml</file>
-				</brandyn_trackcustomers>
+				</Brandyn_Trackcustomers>
 			</updates>
 		</layout>
 		<routers>
-			<brandyn_trackcustomers>
+			<Brandyn_Trackcustomers>
 				<use>standard</use>
 				<args>
 					<module>Brandyn_TrackCustomers</module>
 					<frontName>track</frontName>
 				</args>
-			</brandyn_trackcustomers>
+			</Brandyn_Trackcustomers>
 		</routers>
 	</frontend>
 </config>
