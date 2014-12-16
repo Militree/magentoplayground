@@ -1,0 +1,21 @@
+<!--
+//==================================
+// Track Customers Module
+//==================================
+
+/*
+*	This is a customized module that will allow customer to
+*	be tracked in the "My Account" section on the front end.
+*/
+
+-->
+
+<config>
+	<modules>
+		<Brandyn_TrackCustomers>
+			<active>true</active>
+			<codePool>local</codePool>
+			<version>0.0.1</version>
+		</Brandyn_TrackCustomers>
+	</modules>
+</config>

@@ -1,0 +1,34 @@
+<?php
+
+$customers = Mage::getResourceModel('customer/customer_collection')->addNameToSelect();
+
+?>
+
+<div class="page-title">
+    <h1><?php echo $this->__('Track Customers') ?></h1>
+</div>
+
+<?php echo $this->getMessagesBlock()->toHtml() ?>
+
+<div>
+    <table>
+        <?php
+        foreach ($customers as $customer):
+        ?>
+            <tr>
+                <td><?php echo $customer->getData('name'); ?></td>
+                <td><?php echo $customer->getEmail(); ?></td>
+            </tr>
+            <pre>
+            </pre>
+        <?php
+        endforeach;
+        ?>
+    </table>
+</div>
+<pre>
+<?php
+var_dump($attribute = Mage::getModel('eav/config')->getAttribute('customer','is_tracked'));
+?>
+</pre>
+

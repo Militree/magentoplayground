@@ -1,0 +1,15 @@
+<layout>
+	<customer_account>
+		<reference name="customer_account_navigation">
+			<action method="addLink" module="customer"><name>TrackCustomers</name><path>track/index/index</path><label>Track Customers</label></action>
+		</reference>
+	</customer_account>
+
+	<brandyn_trackcustomers_index_index>
+        <update handle="customer_account" />
+	    <reference name="my.account.wrapper">
+	        <block type="core/template" name="brandyn_trackcustomers" template="customer/track.phtml"/>            
+	    </reference>		
+	</brandyn_trackcustomers_index_index>
+
+</layout>

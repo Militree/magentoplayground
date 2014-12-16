@@ -1,0 +1,13 @@
+<config>
+	<modules>
+		<Brandyn_EntityCreation>
+			<version>0.0.1</version>
+		</Brandyn_EntityCreation>
+	</modules>
+	<resources>
+		<Brandyn_EntityCreation_setup>
+			<module>Brandyn_EntityCreation</module>
+			<class>Brandyn_EntityCreation_Model_Entity_Setup</class>
+		</Brandyn_EntityCreation_setup>
+	</resources>
+</config>
