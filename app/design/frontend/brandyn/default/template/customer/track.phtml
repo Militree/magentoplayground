@@ -11,18 +11,26 @@ $customers = Mage::getResourceModel('customer/customer_collection')->addNameToSe
 <?php echo $this->getMessagesBlock()->toHtml() ?>
 
 <div>
-    <table>
+    <table width="100%">
+    <thead>
+        <th>Tracked</th>
+        <th>Name</th>
+        <th>Email</th>
+    </thead>
         <?php
         foreach ($customers as $customer):
+            $customerObj = Mage::getModel('customer/customer'); //Bad news to load this in a loop, but load() would not work otherwise
+            $customerId = (int)$customer->getID();
+            $isTracked = $customerObj->load($customerId)->getIsTracked();
         ?>
             <tr>
+                <td><input type="checkbox" <?php if($isTracked):?>checked<?php endif; ?> ></td>
                 <td><?php echo $customer->getData('name'); ?></td>
                 <td><?php echo $customer->getEmail(); ?></td>
             </tr>
-            <pre>
-            </pre>
         <?php
         endforeach;
         ?>
     </table>
+    <button type="submit" title="<?php echo $this->__('Save Tracked Customers') ?>" class="button"><span><span><?php echo $this->__('Save Tracked Customers') ?></span></span></button>
 </div>

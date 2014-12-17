@@ -1,25 +1,35 @@
 <config>
 	<modules>
 		<Brandyn_TrackCustomers>
-			<version>0.0.1</version>
+			<version>0.0.2</version>
 		</Brandyn_TrackCustomers>
 	</modules>
-	<global>
+	<global>	
 		<helpers>
 			<Brandyn_Trackcustomers>
 				<class>Brandyn_TrackCustomers_Helper</class>
 			</Brandyn_Trackcustomers>
 		</helpers>
 		<resources>
-			<Brandyn_Trackcustomers_setup>
-				<setup>
-					<modules>Brandyn_TrackCustomers</modules>
-					<class>Brandyn_TrackCustomers_Model_Entity_Setup</class>
-				</setup>
+			<Trackcustomers_setup>
+		        <setup>
+		            <module>Brandyn_TrackCustomers</module>
+		            <class>Brandyn_TrackCustomers_Model_Resource_Mysql4_Setup</class>
+		        </setup>
 		        <connection>
 		            <use>core_setup</use>
 		        </connection>
-			</Brandyn_Trackcustomers_setup>
+			</Trackcustomers_setup>
+			<Trackcustomers_write>
+		        <connection>
+		            <use>core_write</use>
+		        </connection>
+			</Trackcustomers_write>
+			<Trackcustomers_read>
+		        <connection>
+		            <use>core_read</use>
+		        </connection>
+			</Trackcustomers_read>
 		</resources>
 	</global>
 	<frontend>
