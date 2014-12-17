@@ -1,0 +1,15 @@
+<layout>
+	<customer_account>
+		<reference name="customer_account_navigation">
+			<action method="addLink" module="createentity"><name>CreateProduct</name><path>create/products/index</path><label>Create New Simple Product</label></action>
+		</reference>
+	</customer_account>
+
+	<brandyn_entitycreation_products_index>
+        <update handle="customer_account" />
+	    <reference name="my.account.wrapper">
+	        <block type="core/template" name="brandyn_newproduct" template="create/product.phtml"/>            
+	    </reference>		
+	</brandyn_entitycreation_products_index>
+
+</layout>

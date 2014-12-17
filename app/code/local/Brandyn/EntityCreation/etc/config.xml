@@ -4,10 +4,32 @@
 			<version>0.0.1</version>
 		</Brandyn_EntityCreation>
 	</modules>
-	<resources>
-		<Brandyn_EntityCreation_setup>
-			<module>Brandyn_EntityCreation</module>
-			<class>Brandyn_EntityCreation_Model_Entity_Setup</class>
-		</Brandyn_EntityCreation_setup>
-	</resources>
+	<global>
+		<resources>
+			<EntityCreation_setup>
+				<setup>
+					<module>Brandyn_EntityCreation</module>
+					<class>Brandyn_EntityCreation_Model_Resource_Mysql4_Setup</class>
+				</setup>
+			</EntityCreation_setup>
+		</resources>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<Brandyn_EntityCreation module="Brandyn_EntityCreation">
+					<file>Brandyn/createentity.xml</file>
+				</Brandyn_EntityCreation>
+			</updates>
+		</layout>
+		<routers>
+			<Brandyn_EntityCreation>
+				<use>standard</use>
+				<args>
+					<module>Brandyn_EntityCreation</module>
+					<frontName>create</frontName>
+				</args>
+			</Brandyn_EntityCreation>
+		</routers>
+	</frontend>
 </config>

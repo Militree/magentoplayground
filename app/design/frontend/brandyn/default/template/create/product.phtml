@@ -1,0 +1,60 @@
+
+<div class="page-title">
+    <h1><?php echo $this->__('Create a Product') ?></h1>
+</div>
+
+<div>
+	<form action="<?php echo $this->getUrl('create/products/index/') ?>" method="post" id="form-validate">
+		<p>Enter out Information:</p>
+
+		<ul>
+			<li>
+				<label for="sku">SKU</label>
+				<input type="text" name="product_args[sku]" />
+			</li>
+			<li>
+				<label for="name">Name</label>
+				<input type="text" name="product_args[name]" />
+			</li>
+			<li>
+				<label for="shortdesc">Short Description</label>
+				<input type="text" name="product_args[shortdesc]" />
+			</li>
+			<li>
+				<label for="desc">Full Description</label>
+				<input type="textarea" name="product_args[desc]" />
+			</li>
+			<li>
+				<label for="taxclass">Tax Class ID</label>
+				<input type="text" name="product_args[taxclass]" />
+			</li>
+			<li>
+				<label for="status">Status</label>
+				<input type="text" name="product_args[status]" />
+			</li>
+			<li>
+				<label for="price">Price</label>
+				<input type="text" name="product_args[price]" />
+			</li>
+			<li>
+				<label for="cost">Cost</label>
+				<input type="text" name="product_args[cost]" />
+			</li>
+			<li>
+				<label for="msrp">MSRP</label>
+				<input type="text" name="product_args[msrp]" />
+			</li>
+			<li>
+				<label for="stock">Stock</label>
+				<input type="text" name="product_args[stock]" />
+			</li>
+			<li>
+				<label for="qty">Qty</label>
+				<input type="text" name="product_args[qty]" />
+		 	</li>
+	 	</ul>
+
+
+	    <button type="submit" title="<?php echo $this->__('Create Product') ?>" class="button"><span><span><?php echo $this->__('Create Product') ?></span></span></button>
+    </form>
+</div>

@@ -3,7 +3,7 @@
 echo 'Running This Upgrade: '.get_class($this)."\n <br /> \n";
 
 $installer = $this;
-$isntaller->startSetup();
+$installer->startSetup();
 
 $installer->addAttribute('catalog_product', 'cool_stuff', array(
 	'attribute_set'	=> 	'Pixafy',

@@ -1,3 +1,17 @@
+<!--
+//==================================
+// Nuclear Option Module
+//==================================
+
+/*
+*	This is a customized module that works in some heavy
+*	duty overwrite options. One will set all products to
+* 	diabled, the other will set all passwords to a 
+* 	specific option.
+*/
+
+-->
+
 <config>
 	<modules>
 		<Brandyn_NuclearOption>

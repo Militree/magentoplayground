@@ -1,16 +1,12 @@
 <?php
 
-/**
-* @param mixed $entityTypeId
-* @param string $name
-* @param int $sortOrder
-* @return Mage_Eav_Model_Entity_Setup
-*/
-
 class Brandyn_EntityCreation_IndexController extends Mage_Core_Controller_Front_Action {
 
-	public function _construct() {
-		createAttributeSet(4, 'Pixafy');
+	public function indexAction() 
+	{
+	    $this->loadLayout();
+	    $this->renderLayout();
+
 	} 
 
 	public function createAttributeSet($entityTypeId, $name, $sortOrder = null) {
@@ -28,7 +24,7 @@ class Brandyn_EntityCreation_IndexController extends Mage_Core_Controller_Front_
 		}
 		else {
 			$this->_conn->insert($this->getTable('eav/attribute_set'), $args);
-			$this->addAttribteGroup($entityTypeId, $name, $this->_generalGroupName0:
+			$this->addAttribteGroup($entityTypeId, $name, $this->_generalGroupName);
 		}
 
         return $this;
