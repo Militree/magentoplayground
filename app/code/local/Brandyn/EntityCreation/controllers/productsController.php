@@ -37,8 +37,6 @@ class Brandyn_EntityCreation_ProductsController extends Mage_Core_Controller_Fro
 					->setPrice($args['price'])
 					->setCost($args['cost'])
 					->setMSRP($args['msrp'])
-					->setSku($args['sku'])
-					->setSku($args['sku'])
 					->setStockData(array( 
 					   'is_in_stock' => $args['stock'], 
 					   'qty' => $args['qty'],
