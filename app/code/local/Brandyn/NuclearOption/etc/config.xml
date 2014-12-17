@@ -13,13 +13,13 @@
 			</updates>
 		</layout>
 		<routers>
-			<Brandyn_NuclearOption>
+			<Brandyn_Nuclearoption>
 				<use>standard</use>
 				<args>
 					<module>Brandyn_NuclearOption</module>
 					<frontName>nuke</frontName>
 				</args>
-			</Brandyn_NuclearOption>			
+			</Brandyn_Nuclearoption>
 		</routers>
 	</frontend>
 </config>
