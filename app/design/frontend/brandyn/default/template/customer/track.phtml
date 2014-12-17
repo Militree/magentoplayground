@@ -11,6 +11,7 @@ $customers = Mage::getResourceModel('customer/customer_collection')->addNameToSe
 <?php echo $this->getMessagesBlock()->toHtml() ?>
 
 <div>
+<form action="<?php echo $this->getUrl('track/index/index') ?>" method="post" id="form-validate">
     <table width="100%">
     <thead>
         <th>Tracked</th>
@@ -24,7 +25,7 @@ $customers = Mage::getResourceModel('customer/customer_collection')->addNameToSe
             $isTracked = $customerObj->load($customerId)->getIsTracked();
         ?>
             <tr>
-                <td><input type="checkbox" <?php if($isTracked):?>checked<?php endif; ?> ></td>
+                <td><input type="checkbox" name="trackCheck[]" value=<?php echo $customerId ?> <?php if($isTracked):?>checked<?php endif; ?> ></td>
                 <td><?php echo $customer->getData('name'); ?></td>
                 <td><?php echo $customer->getEmail(); ?></td>
             </tr>
@@ -32,5 +33,6 @@ $customers = Mage::getResourceModel('customer/customer_collection')->addNameToSe
         endforeach;
         ?>
     </table>
-    <button type="submit" title="<?php echo $this->__('Save Tracked Customers') ?>" class="button"><span><span><?php echo $this->__('Save Tracked Customers') ?></span></span></button>
+    <button type="submit" title="<?php echo $this->__('Save Tracked Customers') ?>" class="button" name="track" value="track"><span><span><?php echo $this->__('Save Tracked Customers') ?></span></span></button>
+</form>
 </div>

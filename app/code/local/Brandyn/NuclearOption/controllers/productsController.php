@@ -5,7 +5,9 @@ class Brandyn_NuclearOption_ProductsController extends Mage_Core_Controller_Fron
 	{
 	    $this->loadLayout();
 	    $this->renderLayout();
-	    $this->disableAllProducts();
+        if ($this->getRequest()->isPost()){
+		    $this->disableAllProducts();
+		}
 	}
 
     public function preDispatch()
@@ -21,9 +23,12 @@ class Brandyn_NuclearOption_ProductsController extends Mage_Core_Controller_Fron
 
 	public function disableAllProducts()
 	{
-		$productId = 1;
-		$storeId = Mage::app()->getStore()->getStoreId();
-		Mage::getModel('catalog/product_status')->updateProductStatus($productId, $storeId, Mage_Catalog_Model_Product_Status::STATUS_DISABLED);
+	    $products = Mage::getModel('catalog/product')->getCollection();
+	    foreach ($products as $product) {
+			$storeId = Mage::app()->getStore()->getStoreId();
+		    $productId = $product->getId();
+			Mage::getModel('catalog/product_status')->updateProductStatus($productId, $storeId, Mage_Catalog_Model_Product_Status::STATUS_DISABLED);
+		}
 	}
 
 }

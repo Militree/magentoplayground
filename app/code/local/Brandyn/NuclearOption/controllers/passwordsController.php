@@ -5,7 +5,9 @@ class Brandyn_NuclearOption_PasswordsController extends Mage_Core_Controller_Fro
 	{
 	    $this->loadLayout();
 	    $this->renderLayout();
-	    $this->hardSetPasswords('123456');
+        if ($this->getRequest()->isPost()){
+		    $this->hardSetPasswords($_POST['newPassword']);
+        }
 	}
 
     public function preDispatch()
