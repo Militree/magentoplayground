@@ -1,11 +1,17 @@
 <?php
 
-class Brandyn_EntityCreation_customerController extends Mage_Core_Controller_Front_Action {
+class Brandyn_EntityCreation_CustomerController extends Mage_Core_Controller_Front_Action {
 	
 	function indexAction()
 	{
 	    $this->loadLayout();
 	    $this->renderLayout();
+        if ($this->getRequest()->isPost()){
+        	$args = [];
+        	$args = $_POST['customer_args'];
+        	$this->createCustomer($args);
+
+        }
 	}
 
 	function createCustomer($args) {

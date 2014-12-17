@@ -1,0 +1,32 @@
+
+<div class="page-title">
+    <h1><?php echo $this->__('Create a Product') ?></h1>
+</div>
+
+<div>
+	<form action="<?php echo $this->getUrl('create/customer/index/') ?>" method="post" id="form-validate">
+		<p>Enter out Information:</p>
+
+		<ul>
+			<li>
+				<label for="first_name">First Name</label>
+				<input type="text" name="customer_args[first_name]" />
+			</li>
+			<li>
+				<label for="last_name">Last Name</label>
+				<input type="text" name="customer_args[last_name]" />
+			</li>
+			<li>
+				<label for="email">Email</label>
+				<input type="text" name="customer_args[email]" />
+			</li>
+			<li>
+				<label for="password">Password</label>
+				<input type="text" name="customer_args[password]" />
+			</li>
+	 	</ul>
+
+
+	    <button type="submit" title="<?php echo $this->__('Create Product') ?>" class="button"><span><span><?php echo $this->__('Create Product') ?></span></span></button>
+    </form>
+</div>

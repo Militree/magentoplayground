@@ -1,3 +1,15 @@
+<!--
+//==================================
+// Entity Creation Modle
+//==================================
+
+/*
+*	Add some menu items in the customer account section
+*	(because why not) for creating customer and products
+*/
+
+-->
+
 <config>
 	<modules>
 		<Brandyn_EntityCreation>

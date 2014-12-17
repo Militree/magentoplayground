@@ -2,6 +2,7 @@
 	<customer_account>
 		<reference name="customer_account_navigation">
 			<action method="addLink" module="createentity"><name>CreateProduct</name><path>create/products/index</path><label>Create New Simple Product</label></action>
+			<action method="addLink" module="createentity"><name>CreateCustomer</name><path>create/customer/index</path><label>Create New Customer</label></action>
 		</reference>
 	</customer_account>
 
@@ -11,5 +12,12 @@
 	        <block type="core/template" name="brandyn_newproduct" template="create/product.phtml"/>            
 	    </reference>		
 	</brandyn_entitycreation_products_index>
+
+	<brandyn_entitycreation_customer_index>
+        <update handle="customer_account" />
+	    <reference name="my.account.wrapper">
+	        <block type="core/template" name="brandyn_newcustomer" template="create/customer.phtml"/>            
+	    </reference>		
+	</brandyn_entitycreation_customer_index>
 
 </layout>
