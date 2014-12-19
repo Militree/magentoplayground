@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+
+
+	<catalog_product_view>
+        <reference name="content">
+            <reference name="product.info">
+				<!-- Add Cool Stuff Block to PDP Page -->
+				<block type="catalog/product_view" name="cool.stuff" as="coolStuff" template="catalog/product/view/coolstuff.phtml" />
+			</reference>
+		</reference>
+	</catalog_product_view>
+		
+</layout>
