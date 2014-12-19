@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
-
+	<default>
+		<reference name="head">
+			<!-- Add Customized CSS -->
+			<action method="addCSS"><stylesheet>css/custom.css</stylesheet></action>
+		</reference>
+	</default>
 	<catalog_product_view>
         <reference name="content">
             <reference name="product.info">
@@ -11,8 +16,7 @@
 	</catalog_product_view>
 
 	<catalog_category_view>
-			<remove name="right" />
-			
+		<remove name="right" />
 	</catalog_category_view>
 		
 </layout>
