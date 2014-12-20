@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACV,UAAU,EAAE,KAAK",
+"sources": ["../sass/base/_background.scss"],
+"names": [],
+"file": "custom.css"
+}
