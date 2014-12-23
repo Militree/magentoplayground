@@ -3,7 +3,7 @@
 	<default>
 		<reference name="content">
 			<block type="core/text_list">
-				<block type="brandyn/output" template="brandyn/output.phtml" output="toHtml"></block>
+				<block type="httpoutput/output" template="brandyn/output.phtml" output="toHtml"></block>
 			</block>
 		</reference>
 	</default>

@@ -29,7 +29,7 @@ $setup->addAttribute('customer', $attributeSelector, array(
 
 Mage::getSingleton('eav/config')
 	->getAttribute('customer', $attributeSelector)
-	->setData('used_in_forms', array('adminhtml_customer','customer_account_create','customer_account_edit','checkout_register'))
+	->setData('used_in_forms', array('adminhtml_customer','customer_account_create','customer_account_edit', 'checkout_register'))
 	->save();
 
 $customer = Mage::getModel('customer/customer');
