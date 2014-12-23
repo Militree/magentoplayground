@@ -1,0 +1,9 @@
+<config>
+	<modules>
+		<Brandyn_HttpOutput>
+			<active>true</active>
+			<codePool>local</codePool>
+			<version>0.0.1</version>
+		</Brandyn_HttpOutput>
+	</modules>
+</config>

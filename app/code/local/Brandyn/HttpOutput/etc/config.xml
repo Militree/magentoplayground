@@ -1,0 +1,16 @@
+<config>
+	<modules>
+		<Brandyn_HttpOutput>	
+			<version>0.0.1</version>
+		</Brandyn_HttpOutput>
+	</modules>
+	<frontend>
+		<layout>
+			<updates>
+				<Brandyn_HttpOutput name="Brandyn_HttpOutput">
+					<file>output.xml</file>
+				</Brandyn_HttpOutput>
+			</updates>
+		</layout>
+	</frontend>
+</config>
