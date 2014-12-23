@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
 	<default>
-		<reference name="content">
+		<reference name="root">
 			<block type="core/text_list">
-				<block type="httpoutput/output" template="brandyn/output.phtml" output="toHtml"></block>
+				<block type="brandyn/output" before="content" name="brandyn.httpoutput" template="httpoutput/output.phtml" />
 			</block>
 		</reference>
 	</default>
